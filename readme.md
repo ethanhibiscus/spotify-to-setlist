@@ -89,10 +89,7 @@ The script generates a CSV file named **`setlist.csv`** with the following colum
 ## ⚠️ Troubleshooting
 
 ### **1. Tunebat API Throttling**
-If you get **"Throttled. Waiting X seconds..."**, the Tunebat API is rate-limiting requests.  
-✅ **Fix:** The script automatically handles **retries with exponential backoff and jitter**. If throttling persists:
-- Reduce `batchSize` in `spotify_to_setlist.js` (e.g., `batchSize = 3` instead of `5`).
-- Add **longer delays** between batches in `processTracksInBatches()`.
+If you get **"Throttled. Waiting X seconds..."**, the Tunebat API is rate-limiting requests.
 
 ### **2. Missing Spotify API Credentials**
 If you see:
