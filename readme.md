@@ -9,6 +9,8 @@ This project extracts **BPM, key, duration, and energy** from **Spotify playlist
 - **Batch processing** with retry logic to handle API rate limits.
 - **Submodule integration** for `tunebat-api`.
 
+## ❌ Limitations
+- To abide by tunebat's guidelines, the code can only process 10 songs every 10 seconds.
 ---
 
 ## 🚀 Installation & Setup
@@ -107,6 +109,12 @@ If `tunebat-api` is missing:
 ```bash
 git submodule update --init --recursive
 ```
+---
+
+## 🚀 Upcoming Features 
+- Based on BPM and energy will automatically organize set lists based on some distibution with high-energy high-bpm songs likley to be immediately followed by low-energy low-bpm songs
+- A flag that allows someone to specify a setlist as a specific dance type when adding to CSV (I also hope to use BPM data alongside this flag to map to sub-dance types) 
+    - Allowing for multiple playlists at once (e.g 2 swing playlists and 2 waltz playlists)
 
 ---
 

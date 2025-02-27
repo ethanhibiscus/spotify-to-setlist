@@ -214,7 +214,7 @@ async function main() {
   console.log(`\nTotal tracks to process: ${tracks.length}\n`);
 
   // Process tracks in batches with parallel processing and controlled concurrency
-  const rows = await processTracksInBatches(tracks, 5, 5000);
+  const rows = await processTracksInBatches(tracks, 10, 10000);
 
   // Write rows to a CSV file using csv-writer
   const writer = csvWriter({
