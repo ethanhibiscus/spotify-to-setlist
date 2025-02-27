@@ -139,6 +139,14 @@ async function getTunebatData(artist, title, attempt = 1) {
   }
 }
 
+function formatDuration(ms) {
+    if (isNaN(ms) || ms === "N/A") return "N/A"; // Handle invalid cases
+    const minutes = Math.floor(ms / 60000);
+    const seconds = Math.floor((ms % 60000) / 1000);
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`; // Ensure two-digit seconds
+  }
+  
+  
 // Process tracks concurrently in batches
 async function processTracksInBatches(tracks, batchSize = 5, delayBetweenBatches = 5000) {
   const results = [];
@@ -153,14 +161,15 @@ async function processTracksInBatches(tracks, batchSize = 5, delayBetweenBatches
         console.log(`\nProcessing track: ${artist} - ${title}`);
         const tunebatData = await getTunebatData(artist, title);
         if (tunebatData) {
-          console.log(`✓ Tunebat data for "${artist} - ${title}": BPM=${tunebatData.b}, Key=${tunebatData.c}, Duration=${tunebatData.d}, Energy=${tunebatData.e}`);
+            const formattedDuration = formatDuration(tunebatData.d);
+          console.log(`✓ Tunebat data for "${artist} - ${title}": BPM=${tunebatData.b}, Key=${tunebatData.c}, Duration=${formattedDuration}, Energy=${tunebatData.e}`);
           return {
             song: title,
             artist: artist,
             bpm: tunebatData.b,
             key: tunebatData.c,
-            duration: tunebatData.d,  // duration from Tunebat (e.g., milliseconds)
-            energy: tunebatData.e     // energy percentage
+            duration: formattedDuration,  
+            energy: tunebatData.e    
           };
         } else {
           console.warn(`✗ No Tunebat data for: ${artist} - ${title}`);

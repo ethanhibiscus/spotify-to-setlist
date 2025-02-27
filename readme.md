@@ -17,7 +17,7 @@ This project extracts **BPM, key, duration, and energy** from **Spotify playlist
 Since `tunebat-api` is a **submodule**, clone the repository with: 
 
 ```bash
-git clone --recurse-submodules https://github.com/YOUR_USERNAME/spotify-to-setlist.git
+git clone --recurse-submodules https://github.com/ethanhibiscus/spotify-to-setlist.git
 ```
 If you already cloned it without submodules, initialize it manually:
 ```bash
