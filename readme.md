@@ -117,6 +117,7 @@ git submodule update --init --recursive
 - A flag that allows someone to specify a setlist as a specific dance type when adding to CSV (I also hope to use BPM data alongside this flag to map to sub-dance types) 
     - Allowing for multiple playlists at once (e.g 2 swing playlists and 2 waltz playlists)
 - Automatic annotator (rules-based for if a setlist is good or not & which songs should be improved)
+- Possibly use https://www.tencymusic.com/catalog.php?mquery=easily
 ---
 
 ## 🤝 Contributing
