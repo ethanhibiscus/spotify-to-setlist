@@ -1,5 +1,4 @@
 
-```markdown
 # 🎵 Spotify to Setlist
 
 This project extracts **BPM, key, duration, and energy** from **Spotify playlists or individual tracks** using the **Tunebat API**.
