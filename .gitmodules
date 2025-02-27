@@ -1,0 +1,3 @@
+[submodule "tunebat-api"]
+	path = tunebat-api
+	url = https://github.com/TheBrenny/tunebat-api.git
