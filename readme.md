@@ -1,7 +1,8 @@
 
 # 🎵 Spotify to Setlist
 
-This project extracts **BPM, key, duration, and energy** from **Spotify playlists or individual tracks** using the **Tunebat API**.
+This project extracts **BPM, key, duration, and energy** from **Spotify playlists or individual tracks** using the **Tunebat API**. It was made to quickly determine the BPMs of setlists at Stanford,
+but I will expand upon it at some unspecified future date because having a solid repo for social dance set lists is something I will make regardless as a personal script :p.
 
 ## 📌 Features
 - Fetches **track metadata** from Spotify.
